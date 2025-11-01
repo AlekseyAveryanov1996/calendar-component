@@ -1,5 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import CalendarComponent from "./components/Calendar-component.vue";
 
-<template></template>
+// вывод выбранной даты в консоль
+function handleClickDay(date: string) {
+  console.log(date);
+}
+</script>
+
+<template>
+  <div>
+    <CalendarComponent language="ru" @date-select="handleClickDay" />
+  </div>
+</template>
 
 <style scoped></style>
